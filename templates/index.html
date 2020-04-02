@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+    <title>商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 百度禁止转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- 是否开启webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置状态栏背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 忽略页面中的数字识别为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 强制数字不能转为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/Scoreshop.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//localhost/assets/css/common.css">
+    <link rel="stylesheet" href="//localhost/assets/css/layer.css">
+    <link rel="stylesheet" href="//localhost/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="//localhost/assets/css/shoppingmall.css?v=1.0">
+    <link rel="stylesheet" href="//localhost/assets/css/com_My.css?v=1.0">
+    <style>
+        .swiper-container {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f3f3f3;">
+    <div class="container-fluid" style="padding-bottom: 52px">
+        <header class="clearfix clear hidden" style="padding-bottom: .5rem;padding-top: .5rem;">
+            <div class="clear_title">慈善商城</div>
+        </header>
+
+        <div class="row bar"></div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            
+            </div>
+        </div>
+        <!--        <div class="row bar" style="height: 8px"></div>-->
+        <div id="index_form" class="" style="height: 40px;width: 100%;margin-top: 10px;margin-bottom: 10px">
+            <div class="recommend_project_right_top" style="width: 100%;top: 0px">
+                <input type="text" name="keyword" value="" placeholder="搜索商品" style="line-height: 40px;background-color: white">
+                <img id="index_btn" src="assets/img/search.png" style="width:20px;height: 20px;position: absolute;right: 8px;top: 50%;z-index: 1;margin-top: -10px;">
+            </div>
+        </div>
+        <div class="row bar" style="background-color: white"></div>
+        <div class="row app-wai">
+        
+        </div>
+
+
+
+        <div class="hot" id="ho1">
+            <div class="rebate_bold fen_tite">
+                <span class="text_left fen_name"> —— <span>推荐商品</span> ——</span>
+            </div>
+
+            <div id="rec" class="hot_imgs" style="margin-bottom: 0px">
+
+            </div>
+        </div>
+
+        <div class="hot">
+            <div class="rebate_bold fen_tite">
+                <span class="text_left fen_name">—— <span>所有商品</span> ——</span>
+            </div>
+
+            <div id="recs" class="hot_imgs" style="margin-bottom: 0px">
+
+            </div>
+            <div id="page_one" class="text-center page_one_css" data-page="1" data-status="true"> 加载更多</div>
+        </div>
+
+    </div>
+
+    <div class="foot">
+        <div class="row bar"></div>
+        <ul style="display: flex;">
+            <li class="foot_active">
+                <a href="/"><i class="fa fa-home"></i></a>
+                <span><a href="/">商城首页</a></span>
+            </li>
+            <li>
+                <a href="classify"><i class="fa fa-list-ul"></i></a>
+                <span><a href="classify">分类</a></span>
+            </li>
+            <li>
+                <div class="aui-badge" style="display: none"></div>
+                <a href="cart"><i class="fa fa-shopping-cart"></i></a>
+                <span><a href="cart">购物车</a></span>
+            </li>
+            <li>
+                <a href="user"><i class="fa fa-user-circle"></i></a>
+                <span><a href="user">我的</a></span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script id="test" type="text/html">
+{{each list value i}}
+<a href="//localhost/classify?Fid={{value.id}}" class="aui-grid-row-item">
+    {{if value.name == "厨房用具"}}
+    <i class="aui-icon-chujus" style="background-image: url({{value.icon}})"></i>
+    {{else if value.name == "珠宝配饰" || value.name == "个人洗护" || value.name == "家用电器" || value.name == "智能手机"}}
+        <i class="aui-icon-larges" style="background-image: url({{value.icon}})"></i>
+        {{else}}
+            <i class="aui-icon-large" style="background-image: url({{value.icon}})"></i>
+            {{/if}}
+            <p class="aui-grid-row-label">{{value.name}}</p>
+</a>
+{{/each}}
+</script>
+<script type="text/javascript" src="//localhost/assets/js/jquery-3.3.1.min.js"></script>
+<script src="//localhost/assets/js/swiper.min.js"></script>
+<script src="//localhost/assets/js/common.js"></script>
+<script src="//localhost/assets/js/layer.js"></script>
+<script src="//localhost/static/js/template/template-web.js"></script>
+<script src="//localhost/assets/js/shoppingmall.js?v=1.0" type="text/javascript"></script>
+
+</html>

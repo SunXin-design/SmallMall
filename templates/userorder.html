@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="//localhost/static/css/core.css">
+    <link rel="stylesheet" href="//localhost/static/css/icon.css">
+    <link rel="stylesheet" href="//localhost/static/css/home.css">
+    <link rel="stylesheet" href="//localhost/assets/css/layer.css">
+    <style>
+        .layermbtn:before {
+            width: 1px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="aui-header-default aui-header-fixed ">
+        <a href="javascript:history.back(-1)" class="aui-header-item">
+            <i class="aui-icon aui-icon-back"></i>
+        </a>
+        <div class="aui-header-center aui-header-center-clear">
+            <div class="aui-header-center-logo">
+                <div class="">我的订单</div>
+            </div>
+        </div>
+        <a href="#" class="aui-header-item-icon" style="min-width:0">
+            <!--			<i class="aui-icon aui-icon-search"></i>-->
+        </a>
+    </header>
+
+    <div class="aui-myOrder-content">
+        <div class="m-tab demo-small-pitch" data-ydui-tab="">
+            <div class="aui-myOrder-fix">
+                <ul class="tab-nav">
+                    <li class="tab-nav-item tab-active" data-role="order_all" data-id=""><a href="javascript:;">全部</a></li>
+                    <li class="tab-nav-item" data-role="un_pay" data-id="0"><a href="javascript:;">待付款</a></li>
+
+                    <li class="tab-nav-item" data-role="wait_out" data-id="1"><a href="javascript:;">待发货</a></li>
+                    <li class="tab-nav-item" data-role="wait_in" data-id="2"><a href="javascript:;">待收货</a></li>
+                    <li class="tab-nav-item" data-role="complet" data-id="3"><a href="javascript:;">已完成</a></li>
+
+                </ul>
+            </div>
+            <!-- <div class="aui-prompt"><i class="aui-icon aui-prompt-sm"></i>双十一期间发货及物流时效公告</div> -->
+            <div class="tab-panel" style="overflow: auto;">
+                <div class="tab-panel-item tab-active">
+                    <ul id="order_whole"></ul>
+                </div>
+            </div>
+            <div class="look_more" style="text-align: center;display: none"><span class="more" data-id="" style="padding: 5px 30px;display: inline-block;">查看更多</span></div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//localhost/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="//localhost/assets/js/layer.js"></script>
+    <script type="text/javascript" src="//localhost/assets/js/myorder.js?v=1.0"></script>
+</body>
+
+</html>

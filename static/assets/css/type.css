@@ -1,0 +1,100 @@
+.box_show {
+    width: 44%;
+    padding: 2%;
+    border-radius: 8px;
+    background-color: white;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.page_one_css {
+    border-top: 1px solid #ffffff;
+    color: dimgray;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 100px;
+    /*    box-shadow: 0px 0px 5px #888888;*/
+}
+
+.hot_imgs {
+    margin-top: 2%;
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col_w {
+    line-height: 43px;
+    color: #4b4b4b;
+    font-weight: 500
+}
+
+/*小分类*/
+.class_twos ul li {
+    width: 20%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 5px 0%;
+    margin: 1% 1%;
+    display: inline-block;
+}
+/*小分类的外层ul*/
+.nts{
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+}
+.container {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.container::-webkit-scrollbar {
+    display: none; 
+}
+
+.aui-badge {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    min-width: 0.8rem;
+    height: 0.95rem;
+    line-height: 1rem;
+    padding: 0 0.2rem;
+    font-size: 0.6rem;
+    color: #ffffff;
+    background-color: #ff2600;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 64%;
+    z-index: 99;
+}
+
+/*商品分类的标题*/
+.fen_tite {
+    width: auto;
+    text-align: center;
+    background: #e7e5e5;
+    margin-right: -15px;
+    margin-left: -15px;
+    line-height: 35px;
+}
+
+.fen_name {
+    font-size: 20px;
+    font-family: cursive;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*这个是商品是否有 的提示语句*/
+.tiShi_span {
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 12px;
+    color: #d0b8b8
+}

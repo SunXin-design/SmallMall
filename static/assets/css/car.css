@@ -1,0 +1,16 @@
+.tans{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(0,0,0,0.2);
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.tans span{
+    color: aliceblue;
+    font-size: 14px;
+}
+
+

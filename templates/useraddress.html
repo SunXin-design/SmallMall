@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.gyufc.org/sz/help/myHelp.html -->
+<html lang="zh-cn" style="font-size: 52.0833px; width: auto; height: auto;" class="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 百度禁止转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- 是否开启webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置状态栏背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 忽略页面中的数字识别为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 强制数字不能转为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>我的地址</title>
+    <link rel="stylesheet" href="//localhost/assets/css/clearDefault.css">
+    <link rel="stylesheet" href="//localhost/assets/css/common.css">
+    <link rel="stylesheet" href="//localhost/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//localhost/assets/css/MultiPicker.css">
+    <link rel="stylesheet" href="//localhost/assets/css/mobileSelect.css">
+    <link rel="stylesheet" href="//localhost/assets/css/layer.css">
+    <link rel="stylesheet" href="//localhost/assets/css/useraddress.css?v=1.0">
+    <link rel="stylesheet" href="//localhost/assets/css/com_My.css?v=1.0">
+    <script src="//localhost/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="//localhost/assets/js/jquery.cookie.js"></script>
+    <script src="//localhost/assets/js/MultiPicker.js"></script>
+    <script src="//localhost/assets/js/city.js"></script>
+    <script src="//localhost/assets/js/layer.js"></script>
+    <script src="//localhost/assets/js/com.js?v=1.0"></script>
+    <script src="//localhost/assets/js/useraddress.js?v=1.0"></script>
+    <meta name="" content="">
+</head>
+<style>
+    .ris {
+        width: 30%;
+    }
+
+    .ris>input {
+        display: none;
+    }
+
+    .ris>label {
+        position: relative;
+        /*    margin-right: 34px;*/
+    }
+
+    .ris>label::before {
+        display: inline-block;
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid rgb(219, 219, 219);
+        margin-right: 6px;
+        vertical-align: bottom;
+    }
+
+    .ris>input:checked+label::before {
+        background-color: rgb(239, 66, 56);
+    }
+
+    .ris>input:checked+label::after {
+        display: inline-block;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        position: absolute;
+        left: 6px;
+        top: 7%;
+        background-color: white;
+
+    }
+
+    .layermbtn:before {
+        width: 1px;
+    }
+</style>
+
+<body class="" style="width: auto; height: auto;">
+    <div class="container-fluid">
+        <header class="clearfix clear">
+            <a href="javascript:void(0)" onClick='javascript:history.back(-1);'>
+                <img src="//localhost/assets/img/iec-zuo.png" height="10" width="10" alt="" class="clear_img">
+            </a>
+            <div class="clear_title">我的地址</div>
+        </header>
+        <!--        <main>-->
+        <!-- 弹出层 -->
+        <div class="row bar"></div>
+
+        <div id="too" class="layui-form">
+
+        </div>
+
+        <div id="hjhylyContainer"></div>
+        <div id="hjhylyContainer_to"></div>
+
+        <!--修改地址 弹出层-->
+        <div id="tenant-model-box" class="tenant-model">
+            <div class="tenant-model-content">
+                <header class="tenant-model-header">
+                    <b class="fon">修改地址</b>
+                    <span id="closeModel">×</span>
+                </header>
+                <div class="tenant-model-body">
+                    <div class="search-contain">
+                        <div class="search-nav" id="test">
+                            <div class="model">
+                                <input type="hidden" id="userid">
+                                <div class="" style="margin: 2% 2%">收件人:</div>
+                                <input id="cont" class="inpdd" type="text" tabindex="1" placeholder="">
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">收件人电话:</div>
+                                <input id="phon" class="inpdd" type="tel" tabindex="1" placeholder="" maxlength="11">
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">收件人地址:</div>
+                                <input id="multiPickerInput" type="text" name="addr" placeholder="请选择省市区" disabled class="inpdd" />
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">详细地址:</div>
+                                <input id="add" class="inpdd" type="text" tabindex="1" placeholder="" jump=true>
+                            </div>
+                        </div>
+                        <div class="" style="border-bottom: 1px solid #ccc;margin-bottom: 10px;margin-top: 10px">
+                            <ul id="divSelectLi" class="search-ul">
+                            </ul>
+                        </div>
+                        <button id="upd" class="add_address">保存地址</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--新增地址 弹出层-->
+        <div id="tenant-model-box-to" class="tenant-model">
+            <div class="tenant-model-content">
+                <header class="tenant-model-header">
+                    <b class="fon">新增地址</b>
+                    <span id="closeModel_to">×</span>
+                </header>
+                <div class="tenant-model-body">
+                    <div class="search-contain">
+                        <div class="search-nav" id="tests">
+                            <div class="model">
+                                <input type="hidden" id="userid">
+                                <div class="" style="margin: 2% 2%">收件人:</div>
+                                <input id="conts" class="inpdd" type="text" tabindex="1" placeholder="请输入姓名">
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">收件人电话:</div>
+                                <input id="phons" type="tel" tabindex="1" class="inpdd" placeholder="请输入手机号"  maxlength="11">
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">收件人地址:</div>
+                                <input id="multiPickerInput_to" type="text" name="addr" placeholder="请选择省市区" disabled class="inpdd" />
+                            </div>
+                            <div class="model">
+                                <div class="" style="margin: 2% 2%">详细地址:</div>
+                                <input id="adds" type="text" tabindex="1" class="inpdd" placeholder="请输入详细地址" jump=true>
+                            </div>
+                        </div>
+                        <div class="" style="border-bottom: 1px solid #ccc;margin-bottom: 10px;margin-top: 10px">
+                            <ul id="divSelectLi" class="search-ul">
+                            </ul>
+                        </div>
+                        <button id="ses" class="add_address">保存地址</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mgt40">
+        <div class="butts_add">
+            <button id="sel" class="add_address">新 建 收 货 地 址</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//localhost/assets/js/common.js"></script>
+</body></html>

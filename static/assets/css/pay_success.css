@@ -1,0 +1,48 @@
+ body {
+     background-color: #ededed;
+
+ }
+
+ .align_con {
+     margin: 0 auto
+ }
+
+ .Ding_div {
+     text-align: center;
+     margin-bottom: 8%
+ }
+
+ .Ding_h1 {
+     font-size: 30px;
+     letter-spacing: 3.4px;
+     margin-bottom: 1px
+ }
+
+ .Ding_span {
+     color: #999999;
+     letter-spacing: 2px;
+ }
+
+ .Fan_hui {
+     display: flex;
+     justify-content: space-around
+ }
+
+ .Fan_left {
+     background-color: #fe5151;
+     color: white;
+     padding: 10px 9%;
+     letter-spacing: 3px;
+     border-radius: 5px;
+     font-size: 15px
+ }
+
+ .Fan_right {
+     background-color: white;
+     color: #a0a0a0;
+     padding: 10px 9%;
+     letter-spacing: 3px;
+     border-radius: 5px;
+     border: 2px solid #b5b5b5;
+     font-size: 15px
+ }

@@ -1,0 +1,167 @@
+.button_danger {
+    margin-top: .2rem;
+}
+
+
+body {
+    background-color: #ffffff;
+}
+
+
+/*幻灯片*/
+.donate_show {
+    height: 4.2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container-fluid {
+    /*padding-bottom: 1rem;*/
+}
+
+/*遮罩*/
+
+
+
+/*项目预览*/
+
+/*我要捐款*/
+.user_donate {
+    background: #f1f1f1;
+    padding: .1rem .3rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+}
+
+.user_donate > .donate_btn {
+    width: calc(90% - .2rem);
+    display: inline-block;
+    line-height: .9rem;
+}
+
+.dona_left {
+    float: left;
+}
+
+.user_donate > .donate_btn:first-child {
+    margin-right: .1rem;
+}
+
+.user_donate > .donate_btn:last-child {
+    margin-left: .1rem;
+}
+
+
+
+/*公募机构说明*/
+
+
+/*筹款截止日期*/
+
+/*选项卡*/
+.project_box .tab_box {
+    margin-top: .3rem;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.project_box .tab_box .tab_item {
+    width: 33%;
+}
+
+.project_item {
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+}
+
+
+.project_desc {
+    font-size: .28rem;
+}
+
+.project_desc > p {
+    margin-bottom: .4rem;
+    line-height: .4rem;
+}
+
+.p-left {
+    float: left
+}
+
+.lott_active {
+    background: #EE9A00;
+    color: #ffffff;
+    transition: background 1s;
+    box-shadow: 0 2px #d83627;
+}
+
+.lott_item {
+    width: 50%
+}
+
+.but_confim {
+    width: 100%;
+    height: 40px;
+}
+
+.bor_log {
+    border-radius: 50%;
+    width: 36px;
+}
+
+.but {
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+    background-color: #FF4040;
+    color: #fff;
+    border: 1px solid red;
+}
+
+.ft_sz16 {
+    font-size: 16px;
+    font-weight: bold
+}
+
+.mgb3 {
+    margin-bottom: 3%
+}
+
+.article-content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 100%;
+    text-align: justify;
+}
+
+.lin_hei_2 {
+    line-height: .2rem;
+    font-size: 13px;
+    color: #999999;
+}
+
+.lin_hei_6 {
+    line-height: .6rem;
+    font-size: 13px;
+    color: #999999;
+}
+
+.lin_hei_8 {
+    line-height: .8rem;
+}
+
+.ft_cr {
+    font-size: 13px;
+    color: black;
+}
+
+.cor {
+    color: red;
+}

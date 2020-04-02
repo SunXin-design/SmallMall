@@ -1,0 +1,101 @@
+.pl_10{padding-left: 50px;color: black;}
+.hot .hot_img .fz14{font-size: 14px}
+.logo_img{width: 30%;height:40px;}
+.headers{width: 100%;height: 60px}
+.pull-right{float: right}
+.menu_s{width: 10%;height: 40px}
+body {
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    background-color:#FFF;
+}
+
+a {
+    color: #333;
+}
+
+div {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.text_danger {
+    color: #e24c37 !important;
+}
+a, a:hover {
+    text-decoration: none;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+/
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, .7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.mask .left_bar {
+    height: 100%;
+    width: calc(100% - 4.4rem);
+}
+
+.mask .right_bar {
+    width: 4.4rem;
+    background: #ffffff;
+    height: 100%;
+    transform: translateX(4.4rem);
+    transition: transform .5s;
+    float: right;
+    padding-bottom: .2rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+}
+
+.right_bar_menu .right_bar_item {
+    border-bottom: 1px solid #f1f1f1;
+    display: block;
+    margin: 0 .3rem;
+    padding-left: 0.3rem;
+    font-size: .3rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: #333333;
+    padding-right: 0.3rem;
+}
+
+.right_bar_menu {
+    padding-bottom: .2rem;
+}
+
+.mask .right_bar_menu .login {
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .26rem;
+    color: #e66452;
+    border: 1px solid #e66452;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: .3rem;
+    display: block;
+    margin-right: .3rem;
+    margin-left: .3rem;
+}
+
+.single_login {
+    margin-top: .4rem;
+}
+
+

@@ -1,0 +1,133 @@
+.user_address {
+    width: 100%;
+    height: 100%;
+}
+
+.flex1 {
+    display: flex
+}
+
+.f_add {
+    width: 90%;
+    height: 15px;
+}
+
+.f_add_10 {
+    width: 10%;
+    height: 30px;
+}
+
+.fon_name {
+    font-size: 16px;
+    margin-right: 45px
+}
+
+.fon_phone {
+    font-size: 13px
+}
+
+.bor_bot {
+    border-bottom: 1px solid #F0F0F0;
+}
+.pd2 {
+    margin-bottom: 4%
+}
+
+/*修改的样式*/
+.pods{
+    padding: 4%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.x{
+    position: absolute !important; 
+    right: 4% !important; 
+    margin-right: 0 !important;
+    font-size: 20px !important;
+    color: tomato !important;
+}
+
+/*-------------*/
+
+
+.mgt40 {
+    /*
+    margin-top: 60%;
+    height: 30px
+    */
+/*
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+*/
+    height: 30px
+}
+
+.col_red {
+    color: red
+}
+
+.add_address {
+    width: 100%;
+    height: 30px;
+    background-color: #FF6347;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+}
+
+.inpdd {
+    background: #eeeeee;
+    border: 0px;
+    font-size: 12px;
+    width: 80%
+}
+
+.butts_add {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.fl {
+    float: left
+}
+
+.mg_left {
+    margin-left: 1%;
+}
+
+.fr {
+    float: right
+}
+
+
+/*后加的样式*/
+.ress{
+    display: flex;
+    justify-content: space-between;
+}
+.ress_towDiv{
+    margin-right: 100px;
+    border: 1px solid #b9b0b0;
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: #635858;
+    font-size: 14px;
+}
+.ress_towDiv:hover{
+    color: white;
+    background-color: #ef4238;
+}
+
+
+
+
+
+
+
+
+
+
+
+

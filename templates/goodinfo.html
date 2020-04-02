@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>商品详情</title>
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/style.css">
+    <link rel="stylesheet" href="//localhost/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/goodinfo.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//localhost/assets/css/layer.css">
+    <link rel="stylesheet" href="//localhost/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="//localhost/assets/css/mobileSelect.css">
+    <link rel="stylesheet" href="//localhost/assets/css/lotteryInfo.css?v=1.0">
+</head>
+
+<body style="padding-bottom: 45px;">
+    <div class="head" style="background-color: white">
+        <a class="back_left" href="#" onclick="JavaScript:history.back(1);" style="color: #4b4b4b">
+            <i class="fa fa-angle-left" style="position: absolute;line-height: 39px;"></i>
+        </a>
+        <a class="color_white col_w">商品详情</a>
+    </div>
+    <div class="bar"></div>
+    <div style="text-align: center;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="goodcontent" style="padding: 5px 10px 2px;">
+        <div class="flex">
+            <span id="count" class="goods_Money">
+            </span>
+        </div>
+    </div>
+    <div class="goodtitle_my">
+        <p id="title" class="goods_name"></p>
+        <p id="goods_brief" class="goods_brief">
+        </p>
+    </div>
+    <hr size="5px" noshade=true color="#f5f5f5">
+    <div id="" class="goodtitle_my goods_yunFei">
+        <div class="goods_wid">运费</div>
+        <div class="goods_Fei">货到付运费</div>
+    </div>
+    <hr size="5px" noshade=true color="#f5f5f5">
+    <div id="" class="goodtitle_my goods_yunFei" style="justify-content: space-between;">
+        <div class="goods_wid">库存</div>
+        <div class="goods_Fei" id="nums" style="line-height: 16px;"></div>
+    </div>
+    <hr size="5px" noshade=true color="#f5f5f5">
+    <div id="" class="goodtitle_my goods_yunFeis">
+        <div class="goods_wids">购买数量</div>
+        <div class="goods_Fei">
+            <div class="goods_div">
+                <a href="javascript:;" class="goods_div_left">-</a>
+                <input type="number" min="1" value="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" class="goods_div_cont num">
+                <a href="javascript:;" class="goods_div_right">+</a>
+            </div>
+        </div>
+    </div>
+    <hr size="5px" noshade=true color="#f5f5f5">
+    <div class="goodtitle">
+        <div class="bord_top col_red" style="margin-top: 0px;font-size: 17px;">
+            <span class="vont_x"><a href="javascript:void(0);" id="n1" class="col_red">商品详情</a></span>
+
+            <span class="vont_p"><a href="javascript:void(0);" id="n2" class="col_hei">购买记录</a></span>
+        </div>
+
+
+        <div class="goodtitleInfo" style="margin-bottom: 0%" id="detail">
+            <div id="proces" class="project_item project_desc article-content" hidden="" style="display: block;">
+
+            </div>
+
+        </div>
+
+        <div class="goodtitleInfo" style="margin-bottom: 14%" id="details" hidden>
+            <div id="process" class="project_item project_desc article-content" style="display: block;">
+
+            </div>
+            <div id="page_one" class="load_more text-center" style="border-top: 1px solid #e8e8e8;" data-page="1" data-status="true"> 加载更多</div>
+        </div>
+
+    </div>
+</body>
+
+
+<div class="goodinfo_foot_menu">
+    <a href="cart" class="info_ds">
+        <div class="aui-badge" style="display: none"></div>
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+    <div id="buy_bt">加入购物车</div>
+    <div id="buy">立即购买</div>
+</div>
+
+<!--购买选择地址页-->
+<div id="tenant-model-box-to" class="tenant-model">
+    <div class="tenant-model-content">
+        <header class="tenant-model-header col">
+            <b class="fon">请选择收货地址</b>
+            <span id="closeModel_to">×</span>
+        </header>
+        <div class="col">
+            <div class="search-contain">
+                <div class="search-nav" id="tests">
+                    <div id="too" style="margin-bottom: 20%">
+
+                    </div>
+                    <button id="ses" class="btns">立即兑换</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//localhost/assets/js/jquery-3.3.1.min.js"></script>
+<script src="//localhost/assets/js/jquery.cookie.js"></script>
+<script src="//localhost/assets/js/swiper.min.js"></script>
+<script src="//localhost/assets/js/layer.js"></script>
+<script src="//localhost/assets/js/com.js?v=1.0"></script>
+<script type="text/javascript" src="//localhost/assets/js/goodinfo.js?v=1.0"></script>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.gyufc.org/Home/User/ -->
+<html lang="zh-cn" style="font-size: 52.0833px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 百度禁止转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- 是否开启webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置状态栏背景颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 忽略页面中的数字识别为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 强制数字不能转为电话 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="assets/css/clearDefault.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/layer.css">
+    <link rel="stylesheet" href="assets/css/user.css?v=1.0">
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/layer.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/user.js?v=1.0"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+
+        <!-- 个人详情 -->
+        <div class="user_box row">
+            <div class="user_info_top">
+                <div class="user_img">
+                    <img src="" class="headimg">
+                </div>
+                <div class="user_info">
+                    <h4 class="user_name"></h4>
+                    <p id="integral" class="heart_level tooltip tooltipstered">剩余积分： </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 用户页面导航 -->
+        <div class="user_nav">
+            <div class="nav_item">
+                <a href="user/address"><img src="./assets/img/icon-user-activity.png" class="nav_item_img p_r">我的地址</a>
+            </div>
+            <div class="nav_item">
+                <a href="user/order"><img src="./assets/img/header-sp-logo-ding.png" class="nav_item_img p_r">我的订单</a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="foot">
+        <div class="row bar"></div>
+        <ul style="display: flex;">
+            <li>
+                <a href="/">
+                    <i class="fa fa-home user_m"></i>
+                </a>
+                <span style="font-size: .25rem;">
+                    <a href="/">商城首页</a>
+                </span>
+            </li>
+            <li>
+                <a href="classify">
+                    <i class="fa fa-list-ul user_m"></i>
+                </a>
+                <span style="font-size: .25rem;">
+                    <a href="classify">分类</a>
+                </span>
+            </li>
+            <li>
+               <div class="aui-badge" style="display: none"></div>
+                <a href="cart">
+                    <i class="fa fa-shopping-cart user_m"></i>
+                </a>
+                <span style="font-size: .25rem;">
+                    <a href="cart">购物车</a>
+                </span>
+            </li>
+            <li class="foot_active">
+                <a href="user">
+                    <i class="fa fa-user-circle user_m"></i>
+                </a>
+                <span style="font-size: .25rem;">
+                    <a href="user">我的</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/tooltipster.bundle.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        $('.tooltip').tooltipster({
+            theme: 'tooltipster-borderless',
+            delay: 100,
+            trigger: 'click',
+        });
+
+        function tabSwitch(tabBox, obj, toggleClass, fnEnd) {
+            $(tabBox).find('.tab-item').on('click', function() {
+                var index = $(this).index();
+                $('.tab-item').removeClass(toggleClass); //tab_item_active
+                $(this).addClass(toggleClass);
+                $(obj).addClass('hidden').eq(index).removeClass('hidden');
+                if (fnEnd) {
+                    fnEnd(index, $(this));
+                }
+            });
+        }
+
+        tabSwitch('.title-list', '.pannel-list', 'active');
+    });
+
+    $("#zu").click(function() {
+        location.href = "item.html";
+    })
+
+</script>
+
+</html>

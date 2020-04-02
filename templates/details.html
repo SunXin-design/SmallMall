@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="//localhost/static/css/core.css">
+    <link rel="stylesheet" href="//localhost/static/css/icon.css">
+    <link rel="stylesheet" href="//localhost/static/css/home.css">
+
+    <style>
+        .aui-address-box-default:after {
+            display: none !important;
+        }
+
+        .aui-fl-arrow:after {
+            display: none !important;
+        }
+
+        .aui-address-cell-ft {
+            text-align: right;
+            color: #222222;
+            padding-right: 0;
+        }
+
+        .un_pay_warn {
+            margin-top: 2.8rem;
+            background-color: #fc2c3c;
+            padding: 25px 20px;
+            color: white;
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .un_pay_warn p {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .un_pay_warn_img {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+
+        .un_pay_warn_img img {
+            width: 80px;
+            display: block;
+
+        }
+
+        .di_btn {
+            border: 1px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            padding: 2px 6px;
+            color: #666;
+        }
+
+        .layermbtn:before {
+            width: 1px;
+        }
+
+        body {
+            background-color: white !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="aui-header-default aui-header-fixed ">
+        <a href="javascript:history.back(-1)" class="aui-header-item">
+            <i class="aui-icon aui-icon-back"></i>
+        </a>
+        <div class="aui-header-center aui-header-center-clear">
+            <div class="aui-header-center-logo">
+                <div class="">订单详情</div>
+            </div>
+        </div>
+        <a href="#" class="aui-header-item-icon" style="min-width:0"></a>
+    </header>
+    <div class="un_pay_warn" style="display: none">
+        <div class="un_pay_warn_img"><img src="//localhost/static/image/order_detail.png"></div>
+        <p>等待买家付款</p>
+        <p id="timer"></p>
+    </div>
+    <section class="aui-address-content">
+        <div class="aui-address-box">
+            <div class="aui-address-box-list">
+                <a href="javascript:;" class="aui-address-box-default">
+                    <ul>
+                        <li>
+                            <strong><span class="user_name"></span> <span class="user_phone"></span></strong>
+                        </li>
+                        <li>
+                            <i class="aui-icon aui-icon-address"></i>
+                            <span class="user_address"></span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <div class="aui-dri"></div>
+        <div id="aui-list-product-float-item-block"></div>
+        <div class="aui-address-well">
+            <a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+                <div class="aui-address-cell-bd">订单编号:</div>
+                <div class="aui-address-cell-ft order_number"></div>
+            </a>
+            <div class="aui-dri"></div>
+            <a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+                <div class="aui-address-cell-bd">支付方式:</div>
+                <div class="aui-address-cell-ft">微信支付</div>
+            </a>
+            <div class="aui-dri"></div>
+            <a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+                <div class="aui-address-cell-bd">下单时间: </div>
+                <div class="aui-address-cell-ft order_creatTime"></div>
+            </a>
+            <div class="aui-dri"></div>
+            <a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+                <div class="aui-address-cell-bd">订单状态: </div>
+                <div class="aui-address-cell-ft order_status" style="color:#ff5000"></div>
+            </a>
+            <div class="order_score_item"></div>
+            <div class="order_pay_item"></div>
+            <div class="order_ship_item"></div>
+            <div class="order_confirm_item"></div>
+            <div class="order_cancel_item"></div>
+            <div class="order_mailno_item"></div>
+            <div class="aui-dri"></div>
+        </div>
+        <div class="aui-payment-bar" style="height: auto">
+            <div class="shop-total" style="height: auto;line-height: 1rem;"></div>
+            <div class="aui-list-title-btn" id="button_model"></div>
+        </div>
+    </section>
+
+</body>
+<script type="text/javascript" src="//localhost/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="//localhost/assets/js/layer.js"></script>
+<script type="text/javascript" src="//localhost/static/js/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="//localhost/assets/js/details.js?v=1.0"></script>
+
+</html>

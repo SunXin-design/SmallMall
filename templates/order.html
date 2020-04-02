@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="//localhost/assets/css/layer.css">
+	<link rel="stylesheet" href="//localhost/static/css/core.css">
+	<link rel="stylesheet" href="//localhost/static/css/icon.css">
+	<link rel="stylesheet" href="//localhost/static/css/home.css">
+    <script src="//localhost/assets/js/layer.js"></script>
+	<script src="//localhost/static/js/zepto/zepto.min.js"></script>
+	<script src="//localhost/static/js/math/math.min.js"></script>
+    <script src="//localhost/static/js/template/template-web.js"></script>
+	<style>
+        .aui-fl-arrow:after{
+            display: none !important;
+        }
+        body{
+            background-color: white !important;
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-header-default aui-header-fixed ">
+		<a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back"></i>
+		</a>
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="aui-header-center-logo">
+				<div class="">填写订单</div>
+			</div>
+		</div>
+		<a href="#" class="aui-header-item-icon" style="min-width:0">
+		</a>
+	</header>
+	<section class="aui-address-content">
+		<div class="aui-address-box">
+			<div class="aui-address-box-list">
+				<a href="//localhost/shopping/address" class="aui-address-box-default">
+					<ul id="serrss">
+						
+					</ul>
+				</a>
+			</div>
+		</div>
+		<div class="aui-dri"></div>
+		<div class="aui-list-product-float-item">
+		<!--
+			<a href="javascript:;" class="aui-list-product-fl-item">
+				<div class="aui-list-product-fl-img">
+					<img src="//localhost/static/picture/sf-10.jpg" alt="">
+				</div>
+				<div class="aui-list-product-fl-text">
+					<h3 class="aui-list-product-fl-title">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮领半袖男装衣服潮领半袖男装衣服潮</h3>
+					<div class="aui-list-product-fl-mes">
+						<div>
+							<span class="aui-list-product-item-price">
+								<em>¥</em>
+								399.99
+							</span>
+							<span class="aui-list-product-item-del-price">
+								
+							</span>
+						</div>
+						<div class="aui-btn-purchase">
+							<span>数量:4</span>
+						</div>
+					</div>
+					<div class="aui-list-product-fl-bag">
+						<span><img src="//localhost/static/picture/bag1.png" alt=""></span>
+						<span><img src="//localhost/static/picture/bag2.png" alt=""></span>
+					</div>
+				</div>
+			</a>
+			-->
+		</div>
+		
+		<div class="aui-address-well">
+			<div class="aui-dri"></div>
+			<!--
+			<a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+				<div class="aui-address-cell-bd">优惠券</div>
+				<div class="aui-address-cell-ft">不可用</div>
+			</a>
+			<div class="aui-dri"></div>
+			<a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+				<div class="aui-address-cell-bd">礼品卡</div>
+				<div class="aui-address-cell-ft">不可用</div>
+			</a>
+			<div class="aui-dri"></div>
+			-->
+			<a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+				<div class="aui-address-cell-bd" id="integral"></div>
+				<div class="aui-address-cell-ft">&nbsp;&nbsp;<input class="aui-switch" style="border-radius: unset;width:auto;padding-left: 2px;" type="number" id="ders" onkeyup="keyUp(this)">00
+				</div>
+			</a>
+			<div class="aui-dri"></div>
+			<a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+				<div class="aui-address-cell-bd">
+					<p>快递(顺丰)</p>
+				</div>
+				<div class="aui-address-cell-ft">
+					<span class="aui-red">货到付运费</span>
+				</div>
+			</a>
+			<div class="aui-dri"></div>
+			<a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear">
+				<div class="aui-address-cell-bd">
+				    <img src="//localhost/assets/img/wechatpay.png" alt="" style="height: 2rem;">
+				</div>
+			</a>
+		</div>
+		
+		<div class="aui-payment-bar">
+			<div class="shop-total">
+				<span class="aui-red aui-size">实付款: <em id="total"></em></span>
+			</div>
+			<a href="javascript:;" class="settlement">立即支付</a>
+		</div>
+	</section>
+
+</body>
+
+<script id="test" type="text/html">
+    <li>
+        <input type="hidden" id="add_id" value="{{single.id}}">
+        <strong>{{single.contact}} {{single.phone}}</strong>
+        {{if single.default==1}}
+            <span class="aui-tag aui-tag-default" id="aui-default">默认</span>
+        {{/if}}
+    </li>
+    <li>
+        <i class="aui-icon aui-icon-address"></i>
+        {{single.province}} {{single.city}} {{single.area}} {{single.address}}
+    </li>
+</script>
+<script id="scont" type="text/html">
+{{each list value i}}
+<a href="//localhost/item?id={{value.goodsId}}" class="aui-list-product-fl-item">
+	<div class="aui-list-product-fl-img">
+		<img src="{{value.goodsImage}}" alt="">
+	</div>
+	<div class="aui-list-product-fl-text">
+		<h3 class="aui-list-product-fl-title">{{value.goodsName}}</h3>
+		<div class="aui-list-product-fl-mes">
+			<div>
+				<span class="aui-list-product-item-price">
+					<em>¥</em>
+					{{value.goodsPrice}}
+				</span>
+				<span class="aui-list-product-item-del-price">
+					
+				</span>
+			</div>
+			<div class="aui-btn-purchase">
+				<span>数量:{{value.quantity}}</span>
+			</div>
+		</div>
+		<div class="aui-list-product-fl-bag">
+			
+		</div>
+	</div>
+</a>
+{{/each}}
+</script>
+<script src="//localhost/assets/js/com.js?v=1.0"></script>
+<script src="//localhost/assets/js/order.js?v=1.0"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="//localhost/static/css/core.css">
+    <link rel="stylesheet" href="//localhost/static/css/icon.css">
+    <link rel="stylesheet" href="//localhost/static/css/home.css">
+    <link rel="stylesheet" href="//localhost/assets/css/car.css?v=1.0">
+    <script src="//localhost/assets/js/layer.js"></script>
+    <script src="//localhost/static/js/zepto/zepto.min.js"></script>
+    <script src="//localhost/static/js/template/template-web.js"></script>
+    <style>
+        .swipeleft {
+            transform: translateX(-55px);
+            -webkit-transform: translateX(-55px);
+            transition: all 0.2s ease 0s;
+        }
+        .swi {
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            transition: all 0.2s ease 0s;
+        }
+        .del {
+            /*            height: 28px !important;*/
+            /*            height: 15px !important;*/
+            /*            line-height: 25px !important;*/
+            display: flex;
+            justify-content: center;
+        }
+
+        .layermbtn:before {
+            width: 1px;
+        }
+
+        .btn_span {
+            position: absolute;
+            top: 0;
+            right: -55px;
+            text-align: center;
+            background: #f23030;
+            color: #fff;
+            width: 55px;
+            font-size: 14px;
+            padding: 0px 15px;
+            height: 100%;
+            writing-mode: vertical-lr;
+        }
+
+        .kong {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 100px;
+            color: #dacece;
+        }
+
+        .kong_text {
+            letter-spacing: 4px
+        }
+
+        body {
+            background-color: white !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="aui-header-default aui-header-fixed ">
+        <a href="javascript:history.back(-1)" class="aui-header-item">
+            <i class="aui-icon aui-icon-back"></i>
+        </a>
+        <div class="aui-header-center aui-header-center-clear">
+            <div class="aui-header-center-logo">
+                <div class="">购物车</div>
+            </div>
+        </div>
+        <a href="#" class="aui-header-item-icon" style="min-width:0">
+            <!--            			<i class="aui-icon aui-icon-member"></i>-->
+        </a>
+    </header>
+    <section class="aui-car-content">
+        <div class="aui-dri"></div>
+        <div class="aui-car-box">
+            <div class="aui-car-box-list">
+                <ul id="goods_my" style="overflow: hidden">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="aui-payment-bar">
+        <div class="all-checkbox"><input type="checkbox" class="check goods-check" id="AllCheck">全选</div>
+        <div class="shop-total">
+            <strong>合计：<i class="total" id="AllTotal">0.00</i></strong>
+        </div>
+        <a href="javascript:void(0);" class="settlement">去结算</a>
+    </div>
+
+</body>
+<script id="test" type="text/html">
+{{if list.length ==0}}
+<div class="kong">
+    <img src="//localhost/static/image/gouwuche.png" width="190px" style="margin: 10px auto;" alt="">
+    <div class="kong_text">购物车空空如也~</div>
+</div>
+{{/if}}
+{{each list value i}}
+<li class="list-li" style="position: relative;margin-bottom: auto;">
+    {{if value.stock == 0}}
+    <div class="tans"><span>此商品没有货，请等有货在购买，或删除~</span></div>
+    {{/if}}
+    <div class="aui-car-box-list-item">
+        {{if value.select ==1}}
+        <input type="checkbox" class="check goods-check goodsCheck" data-id="{{value.id}}" checked />
+        {{else if value.stock == 0}}
+            <input type="checkbox" class="" data-id="{{value.id}}" />
+            {{else}}
+                <input type="checkbox" class="check goods-check goodsCheck" data-id="{{value.id}}" />
+                {{/if}}
+                <div class="aui-car-box-list-img">
+                    <a href="#">
+                        <img src="{{value.image}}" alt="">
+                    </a>
+                </div>
+                <div class="aui-car-box-list-text">
+                    <h4>
+                        <a href="#">{{value.goodsName}}</a>
+                    </h4>
+                    <div class="aui-car-box-list-text-brief del">
+                        ◀ 左滑删除
+                        <div class="btn_span" data-id="{{value.id}}">删除</div>
+                    </div>
+                    <div class="aui-car-box-list-text-price">
+                        <div class="aui-car-box-list-text-pri">
+                            ￥<b class="price">{{value.price}}</b>
+                        </div>
+                        <div class="aui-car-box-list-text-arithmetic">
+                            <a href="javascript:;" class="minus">-</a>
+                            <span class="num" data-id="{{value.id}}">{{value.sum}}</span>
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</li>
+<div class="aui-dri"></div>
+{{/each}}
+</script>
+<script src="//localhost/assets/js/car.js?v=1.0"></script>
+<script src="//localhost/static/js/aui-car.js"></script>
+
+</html>
